@@ -27,7 +27,7 @@
 
 %%% YOUR OPTIONS HERE %%%
 
-\title[PG Presentation]{Licencjonowanie w kryptografii}
+\title[PG Presentation]{Licencjonowanie w sieciach komputerowych}
 \author{inż. Mikołaj Nowak \and inż. Jakub Grzybowski \and inż. Wojciech Baranowski}
 \date{\today}
 
@@ -259,6 +259,136 @@
     \end{itemize}
     \item Wybór systemu to wybór między elastycznością a wygodą (i czasem – wsparciem komercyjnym).
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Kryptografia w sieciach komputerowych}
+  Sieci komputerowe dzisiaj nieodzownie łączą się z kryptografią, która pozwala nam zapewnić atrybuty bezpieczeństwa informacji takie jak: poufność, integralność, uwierzytelnianie i niezaprzeczalność. Nie zawsze tak jednak było... 
+\end{frame}
+
+\begin{frame}{Historia eksportu kryptografii z USA}
+  \begin{itemize}
+      \item Podczas zimnej wojny istniały silne regulacje ograniczające eksport technologii krytycznej z USA do Bloku Wschodniego, do której zaliczana była kryptografia
+      \item Eksportem zarządzała organizacja CoCom (Coordinating Committee for Multilateral Export Controls)
+      \item W latach 60 organizacje finansowe zaczynały zgłaszać zapotrzebowanie na opracowanie rozwiązań kryptograficznych celem zabezpieczenia rozwijających się przelewów elektronicznych
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Data Encryption Standard - DES}
+    \begin{itemize}
+      \item Na początku lat 70 NIST (National Institute of Standards and Technology) zdecydowało się na wprowadzenie rządowego standardu szyfrowania.
+      \item IBM w odpowiedzi na zapotrzebowanie zaproponowało swój standard - znany później jako DES
+      \item Oryginalny DES zakładał wykorzystanie kluczy 128-bitowych, NSA (National Security Agency) nalegało na skrócenie długości do 48 bitów. Jako "kompromis" zastosowano klucze 56-bitowe.
+      \item Ponadto NSA wprowadziło zmiany do algorytmu, których uzasadnienie nie zostało podane do wiadomości publicznej. Pojawiły się spekulacje o wprowadzenie tylnich drzwi
+      \item DES został opublikowany w 1977 jako standard federalny FIPS PUB 46
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Rivest–Shamir–Adleman Cryptosystem - RSA}
+    \begin{itemize}
+        \item W 1977 trójka naukowców opracowała algorytm RSA
+        \item Próba opublikowania algorytmu mogłaby skutkować karą więzienia dla autorów
+        \item Algorytmy kryptograficzne z punktu widzenia prawa traktowane były jak broń
+        \item Dokument opisujący RSA był kopiowany i przekazywany pocztą pantoflową
+        \item Rząd USA ugiął się i pozwolił na publikację pracy w 1979
+        \item W 1983 algorytm został opatentowany (w USA). Patent wygasł w roku 2000.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Pretty Good Privacy - PGP}
+    \begin{itemize}
+        \item W 1991 Phil Zimmerman stworzył program PGP umożliwiający szyfrowanie oraz cyfrowe podpisywanie tekstu, maili, plików, katalogów a nawet całych partycji dyskowych
+        \item Było to jedno z pierwszych narzędzi które umożliwiały każdemu stosowanie algorytmów kryptograficznych
+        \item Opublikowany w domenie publicznej (public domain)
+        \item Oprogramowanie trafiło też poza USA
+        \item Rząd stanów zjednoczonych rozpoczął śledztwo przeciwko Zimmermanowi pod kątem nielicencjonowanego eksportu broni
+        \item Wówczas wszystkie systemy kryptograficzne używające ponad 40 bitów były uważane za broń. PGP używało kluczy 128-bitowych
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{PGP - naruszenie patentu RSA}
+    \begin{itemize}
+        \item Zimmerman naruszył także patent który od 1983 obejmował RSA.
+        \item Organizacja, która zarządzała patentem na RSA zażądała od Zimmermana zaprzestania dystrybucji PGP
+        \item Sam Zimmerman faktycznie zaprzestał... 
+        \item Co dało odwrotny efekt - oprogramowanie jeszcze bardziej zyskało na popularności i ludzie jeszcze chętniej je rozpowszechniali
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{PGP - pierwsze zastosowania i obawy}
+    \begin{itemize}
+        \item PGP świetnie sprawdziło się u ludzi żyjących w krajach rządzonych przez opresyjne rządy
+        \item NSA argumentowało, że oprogramowanie będzie używane przez pedofili i przestępców
+        \item W praktyce takie argumenty można zastosować do wielu innych wynalazków
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{PGP vs USA - ciąg dalszy}
+    \begin{itemize}
+        \item Rząd USA naciskał na konieczność wdrażania tylnych drzwi dla służb przez firmy tworzące oprogramowanie
+        \item Administracja Billa Clintona powiedziała kongresowi "Americans have no Constitutional right to choose their own method of encryption"
+        \item Ludzie zwracali uwagę na podobieństwo kodu i innych form wolności słowa
+        \item Zimmerman przekonał MIT do wydrukowania kodu, oprawienia go w książkę i wysłania do europejskich bibliotek
+        \item Rząd wiedział, że gdyby zablokowali wydanie książki, skutkowałoby to sprawą sądową którą by przegrał ze względu na naruszenie pierwszej poprawki (wolność religii, słowa, prasy, zgromadzeń i petycji)
+        \item Stosowano też inne, niecodzienne formy eksportu
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Eksport kryptografii - obejścia}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.5\linewidth]{lo-main/rsa.jpg}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Eksport kryptografii - obejścia}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.75\linewidth]{lo-main/rsa2.jpg}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Eksport kryptografii - obejścia}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\linewidth]{lo-main/rsa3.jpg}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{PGP vs USA - ciąg dalszy}
+    \begin{itemize}
+        \item Sąd po przeanalizowaniu sprawy Zimmermana uznał, że oprogramowanie szyfrujące jest chronione przez pierwszą poprawkę i nie powinno się ograniczać jego rozpowszechniania
+        \item Wszelkie akcje prawne przeciwko Zimmermanowi zostały wstrzymane
+        \item Do dnia dzisiejszego rządy nie są zadowolone z kryptografii i często naciskają na producentów oprogramowania na wprowadzanie do oprogramowania tylnej furtki
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{PGP dziś}
+    \begin{itemize}
+        \item PGP zostało przejęte przez firmę Network Associates Inc. (NAI) i przekształciło się w rozwiązanie komercyjne
+        \item Oprócz rozwiązania komercyjnego powstał też otwarty standard OpenPGP
+        \item Najbardziej znaną implementacją standardu OpenPGP jest GnuPG (GPG), działającą w latach 1997-2007 na licencji GPL-2.0-or-later a od 2007 na licencji GPL-3.0-or-later
+        \item GPG nie może używać opatentowanych algorytmów, PGP (komercyjne) może używać tych, na które wykupiło licencje
+        \item Jako że patenty działają w obrębie danego kraju, istnieją wtyczki umożliwiające GPG korzystanie z algorytmów zastrzeżonych np. w USA. Oczywiście nie powinny być one stosowane przez mieszkańców USA.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Inne rozwiązania}
+    Do innych rozwiązań kryptograficznych działających w sieciach komputerowych możemy zaliczyć:
+    \begin{itemize}
+        \item OpenSSL - wieloplatformowa implementacja protokołów SSL i TLS i innych algorytmów kryptograficznych. Wcześniej udostępniana była na licencji OpenSSL License / SSLeay license, zbliżonej do licencji Apache, od wersji 3.0 wydanej w 2018 roku obowiązuje licencja Apache-2.0
+        \item OpenVPN - oprogramowanie do tworzenia sieci VPN udostępniane na licencji GPLv2
+        \item WireGuard - oprogramowanie do tworzenia VPN, nowsze, prostsze i szybsze niż OpenVPN, licencje różnią się w zależności od implementacji (MIT/Apache 2.0/GPLv2/GPLv3)
+        \item OpenSSH - oprogramowanie bazujące na protokole SSH umożliwiające zestawienie bezpiecznego połączenia w niezabezpieczonej sieci. Udostępnione na licencji BSD.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Bibliografia}
+    \begin{itemize}
+        \item Thomas R. Johnson "American Cryptology during the Cold War, 1945-1989.Book III: Retrenchment and Reform, 1972-1980"
+        \item Film dokumentalny "Cypherpunks Write Code" produkcji magazynu Reason
+        \item philzimmermann.com
+        \item Stallings, W.: Cryptography and network security: principles and practice.
+    \end{itemize}
 \end{frame}
 
 %%% PG LAST PAGE %%%
