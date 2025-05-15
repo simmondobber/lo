@@ -382,12 +382,96 @@
     \end{itemize}
 \end{frame}
 
+\begin{frame}{Wirtualizacja sieci komputerowych}
+
+W ostatnich dwóch dekadach, rozwinęła się znacząco koncepcja przeniesienia sieci komputerowych z fizycznych urządzeń (przełączników, routerów) do postaci oprogramowania
+\begin{itemize}
+    \item IETF bada wyniesienie płaszczyzny sterowania z urządzeń sieciowych (Forwarding and Control Element Separation -- ForCES, 2004)
+    \item Projekt Ethane -- podwaliny pod kolejne rozwiązania (Stanford, 2007)
+    \item Paradygmat sieci definiowanych programowo -- SDN -- oraz powstanie protokołu OpenFlow (Stanford, 2008)
+    \item Powstanie organizacji Open Network Foundation, finansowanej przez największe spółki cyfrowe (Facebook, Google czy Microsfot) w celu rozpromowania koncepcji SDN i rozwoju OpenFlow (2011)
+    \item Implementacja SDN w centrach danych (m.in. przez Google) przez autorskie rozwiązania (2012)
+    
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Czym jest Open Compute Project (OCP)?}
+\begin{itemize}
+    \item Inicjatywa zapoczątkowana przez Facebooka w 2011 roku.
+    \item Celem jest otwarte projektowanie sprzętu dla centrów danych: serwerów, przełączników, pamięci.
+    \item Promuje open hardware – otwarte specyfikacje i współdzielone projekty.
+    \item Partnerzy: Facebook, Intel, Microsoft, Google, Dell, IBM i inni.
+    \item Zalety: niższe koszty, większa elastyczność, lepsza efektywność energetyczna.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Microsoft dołącza do OCP (2014)}
+\begin{itemize}
+    \item Microsoft dołącza do OCP jako contributing member w 2014 r.
+    \item Udostępnia specyfikacje sprzętowe używane w chmurze Azure.
+    \item Cele:
+    \begin{itemize}
+        \item Standaryzacja i interoperacyjność infrastruktury.
+        \item Przejście z zamkniętych do otwartych rozwiązań.
+        \item Stworzenie podstaw pod otwarte projekty sieciowe (np. SONiC).
+    \end{itemize}
+    \item Źródło: \texttt{azure.microsoft.com/blog/microsoft-joins-open-compute-project}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Koncepcja SONiC}
+
+    W 2016 roku, firma Microsoft w ramach członkostwa w OCP postanowiła utworzyć w pełni niezależną od sprzętu platformę sieciową, która byłaby uniwersalnym frameworkiem dla centrum danych (w MS na potrzeby Azure). Cechy rozwiązania:
+
+
+    \begin{itemize}
+    \item \textbf{Przykład NOS} -- Network Operating System, czyli sieciowego systemu operacyjnego
+    \item \textbf{Modularność i konteneryzacja} -- komponenty SONiC działają jako niezależne kontenery Docker, co ułatwia zarządzanie i aktualizacje.
+    \item \textbf{Niezależność od sprzętu} -- dzięki SAI (Switch Abstraction Interface), SONiC działa na przełącznikach wielu dostawców, eliminując vendor lock-in.
+    \item \textbf{Skalowalność} -- zaprojektowany do dużych centrów danych, obsługuje funkcje klasy operatorskiej jak BGP, RDMA, ACL, ECMP.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{SONiC -- schemat}
+  \begin{figure}
+      \centering
+      \includegraphics[width=0.7\linewidth]{SONIC.png}
+      \caption{Architektura rozwiązania SONiC}
+      \label{fig:enter-label}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Licencjonowanie SONiC – przegląd ogólny}
+\begin{itemize}
+    \item \textbf{SONiC} jest oprogramowaniem open-source, aktualnie rozwijanym przez Linux Foundation 
+    \item Zbudowany z wielu modułów – większość udostępniona na licencji \textbf{Apache 2.0}.
+    \item Część komponentów pomocniczych pochodzi ze świata Linuksa i korzysta z licencji \textbf{GPLv2}.
+    \item Komercyjni dostawcy (np. Dell, Broadcom) mogą oferować rozszerzenia na licencjach zamkniętych.
+    \item SONiC zachęca do modularności – dzięki temu łatwiej kontrolować zgodność licencyjną.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Licencjonowanie SONiC – warstwa po warstwie}
+\begin{itemize}
+    \item \textbf{Kernel i narzędzia systemowe:} bazują na Debianie/Linux – licencja \textbf{GPLv2}.
+    \item \textbf{Platforma NOS:} główne komponenty SONiC (orchestrator, systemd services, syncd) – licencja \textbf{Apache 2.0}.
+    \item \textbf{SAI (Switch Abstraction Interface):} udostępniany przez OCP, najczęściej na \textbf{Apache 2.0}, ale konkretna implementacja zależy od dostawcy ASIC.
+    \item \textbf{Interfejsy API i narzędzia zarządzania:} CLI, REST API, gRPC – przeważnie Apache 2.0.
+    \item \textbf{Dodatki i pluginy:} mogą być na licencjach mieszanych (np. MIT, BSD, własne licencje dostawców).
+\end{itemize}
+\end{frame}
+
+
 \begin{frame}{Bibliografia}
     \begin{itemize}
         \item Thomas R. Johnson "American Cryptology during the Cold War, 1945-1989.Book III: Retrenchment and Reform, 1972-1980"
         \item Film dokumentalny "Cypherpunks Write Code" produkcji magazynu Reason
         \item philzimmermann.com
         \item Stallings, W.: Cryptography and network security: principles and practice.
+        \item Casado M. et al. "Ethane: Taking Control of the Enterprise" (Stanford, 2007)
+        \item McKeown N. et al. "OpenFlow: Enabling Innovation in Campus Networks" (Stanfrod, 2008)
+        \item https://sonicfoundation.dev/
+        \item https://en.wikipedia.org/wiki/SONiC\_(operating\_system)
     \end{itemize}
 \end{frame}
 
