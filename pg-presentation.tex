@@ -336,21 +336,21 @@
 \begin{frame}{Eksport kryptografii - obejścia}
     \begin{figure}
         \centering
-        \includegraphics[width=0.5\linewidth]{rsa.jpg}
+        \includegraphics[width=0.5\linewidth]{lo-main/rsa.jpg}
     \end{figure}
 \end{frame}
 
 \begin{frame}{Eksport kryptografii - obejścia}
     \begin{figure}
         \centering
-        \includegraphics[width=0.75\linewidth]{rsa2.jpg}
+        \includegraphics[width=0.75\linewidth]{lo-main/rsa2.jpg}
     \end{figure}
 \end{frame}
 
 \begin{frame}{Eksport kryptografii - obejścia}
     \begin{figure}
         \centering
-        \includegraphics[width=0.8\linewidth]{rsa3.jpg}
+        \includegraphics[width=0.8\linewidth]{lo-main/rsa3.jpg}
     \end{figure}
 \end{frame}
 
@@ -384,13 +384,13 @@
 
 \begin{frame}{Wirtualizacja sieci komputerowych}
 
-W ostatnich dwóch dekadach, rozwinęła się znacząco koncepcja przeniesienia sieci komputerowych z fizycznych urządzeń (przełączników, routerów) do postaci oprogramowania
+W ostatnich dwóch dekadach, znacząco rozwinęła się koncepcja przeniesienia sieci komputerowych z fizycznych urządzeń (przełączników, routerów) do postaci oprogramowania
 \begin{itemize}
-    \item IETF bada wyniesienie płaszczyzny sterowania z urządzeń sieciowych (Forwarding and Control Element Separation -- ForCES, 2004)
-    \item Projekt Ethane -- podwaliny pod kolejne rozwiązania (Stanford, 2007)
-    \item Paradygmat sieci definiowanych programowo -- SDN -- oraz powstanie protokołu OpenFlow (Stanford, 2008)
-    \item Powstanie organizacji Open Network Foundation, finansowanej przez największe spółki cyfrowe (Facebook, Google czy Microsfot) w celu rozpromowania koncepcji SDN i rozwoju OpenFlow (2011)
-    \item Implementacja SDN w centrach danych (m.in. przez Google) przez autorskie rozwiązania (2012)
+    \item \textbf{2004}: IETF bada wyniesienie płaszczyzny sterowania z urządzeń sieciowych (Forwarding and Control Element Separation -- ForCES)
+    \item \textbf{2007}: Projekt Ethane -- podwaliny pod kolejne rozwiązania (Stanford)
+    \item \textbf{2008}: Paradygmat sieci definiowanych programowo -- SDN -- oraz powstanie protokołu OpenFlow (Stanford)
+    \item \textbf{2011}: Powstanie organizacji Open Network Foundation, finansowanej przez największe spółki cyfrowe (Facebook, Google czy Microsfot) w celu rozpromowania koncepcji SDN i rozwoju OpenFlow
+    \item \textbf{2012}: Implementacja SDN w centrach danych (m.in. przez Google) przez autorskie rozwiązania
     
 \end{itemize}
 \end{frame}
@@ -461,20 +461,40 @@ W ostatnich dwóch dekadach, rozwinęła się znacząco koncepcja przeniesienia 
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Licencjonowanie w SONiC – podsumowanie}
+\begin{table}[h!]
+\centering
+\footnotesize
+\begin{tabular}{|p{3.5cm}|p{2.5cm}|p{2cm}|p{4.5cm}|}
+\hline
+\textbf{Komponent / warstwa} & \textbf{Licencja} & \textbf{Typ} & \textbf{Cechy licencji} \\
+\hline
+Kernel Linux / Debian tools & GPLv2 & Copyleft & Wymaga udostępnienia kodu źródłowego przy dystrybucji binarnej \\
+\hline
+SONiC NOS (orchestrator, syncd, systemd) & Apache 2.0 & Permissive & Zezwala na modyfikacje i zamknięte dystrybucje, zachowanie licencji w nagłówkach \\
+\hline
+SAI (Switch Abstraction Interface) & Apache 2.0 (w OCP) & Permissive & Neutralność sprzętowa, możliwość integracji z różnymi ASIC \\
+\hline
+CLI, REST API, gRPC tools & Apache 2.0 & Permissive & Swoboda integracji, otwartość kodu, brak obowiązku udostępnienia modyfikacji \\
+\hline
+Dodatki i pluginy (opcjonalne) & MIT / BSD / Proprietary & Różne & Lekkie ograniczenia (MIT/BSD) lub zamknięte rozszerzenia dostawców \\
+\hline
+\end{tabular}
+\caption{Zestawienie licencji komponentów SONiC}
+\end{table}
+\end{frame}
+
+
 \begin{frame}{Bibliografia}
     \begin{itemize}
-        \item Thomas R. Johnson "American Cryptology during the Cold War, 1945-1989. Book III: Retrenchment and Reform, 1972-1980"
+        \item Thomas R. Johnson "American Cryptology during the Cold War, 1945-1989.Book III: Retrenchment and Reform, 1972-1980"
         \item Film dokumentalny "Cypherpunks Write Code" produkcji magazynu Reason
         \item philzimmermann.com
         \item Stallings, W.: Cryptography and network security: principles and practice.
         \item Casado M. et al. "Ethane: Taking Control of the Enterprise" (Stanford, 2007)
-        \item McKeown N. et al. "OpenFlow: Enabling Innovation in Campus Networks" (Stanford, 2008)
+        \item McKeown N. et al. "OpenFlow: Enabling Innovation in Campus Networks" (Stanfrod, 2008)
         \item https://sonicfoundation.dev/
         \item https://en.wikipedia.org/wiki/SONiC\_(operating\_system)
-        \item Tanenbaum A. S. "Modern Operating Systems", Prentice Hall
-        \item https://www.netburner.com/learn/lwip-stack-overview/
-        \item https://contiki-os.org/
-        \item Licencje GPL i BSD – https://opensource.org/licenses
     \end{itemize}
 \end{frame}
 
